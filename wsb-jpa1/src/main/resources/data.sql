@@ -11,10 +11,10 @@ insert into patient (id, first_name, last_name, telephone_number, email, date_of
             (4, 'Klementyna', 'Kot', '321654987', NULL, '2005-06-01', '0010001', true, 16);
 
 insert into doctor (id, first_name, last_name, specialization, telephone_number, email, doctor_number)
-    values (1, 'Alojzy', 'Zdrowy', 'Orthopedist', '456123789','dr.ortho@mail.com', '1'),
-    (2, 'Hanna', 'Kolano', 'Dentist', '465312798', 'dr.dentist@mail.com', '2'),
-    (3, 'Antoni', 'Glodny', 'Gastroenterologist', '332665998', 'dr.gastro-ent@mail.com', '3'),
-    (4, 'Franciszka', 'Geniusz', 'Neurologist', '221554887', 'dr.neuron@mail.com', '4');
+    values (1, 'Alojzy', 'Zdrowy', 'ORTHOPEDIST', '456123789','dr.ortho@mail.com', '1'),
+    (2, 'Hanna', 'Kolano', 'DENTIST', '465312798', 'dr.dentist@mail.com', '2'),
+    (3, 'Antoni', 'Glodny', 'GP', '332665998', 'dr.gastro-ent@mail.com', '3'),
+    (4, 'Franciszka', 'Geniusz', 'NEUROLOGIST', '221554887', 'dr.neuron@mail.com', '4');
 
 insert into visit (id, description, time, doctor_id, patient_id)
             values (1, 'wisdom tooth extraction', '2024-05-02 12:30:00', 2, 1),
@@ -23,7 +23,7 @@ insert into visit (id, description, time, doctor_id, patient_id)
                    (4, 'migraine treatment', '2023-01-12 12:00:00', 4, 3);
 
    insert into medical_treatment (id, description, visit_id)
-               values (1, 'treatment', 1),
+               values (1, 'classic_treatment', 1),
                       (2, 'RTG', 2),
                       (3, 'consultation', 3),
                       (4, 'USG', 4);
