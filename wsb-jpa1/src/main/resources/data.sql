@@ -6,9 +6,9 @@ insert into address (id, address_line1, address_line2, city, postal_code)
 
 insert into patient (id, first_name, last_name, telephone_number, email, date_of_birth, patient_number, verified, day_off)
             values (1, 'Marcin', 'Maj', '123456789', 'mmaj@mail.com', '1998-05-05', '0000125', true, 0),
-            (2, 'Kamila', 'Kwiecien', '132465798', 'kkwiecien@mail.com', '1952-04-15', '0000016', true, 12),
+            (2, 'Kamila', 'Kwiecien', '132465798', 'kkwiecien@mail.com', NULL, '0000016', true, 12),
             (3, 'Ludwik', 'Ladny', '231564897', 'l.ladny@mail.com', '1987-02-14', '0003125', false, 10),
-            (4, 'Klementyna', 'Kot', '321654987', 'klem.kot2005@mail.com', '2005-06-01', '0010001', true, 16);
+            (4, 'Klementyna', 'Kot', '321654987', NULL, '2005-06-01', '0010001', true, 16);
 
 insert into doctor (id, first_name, last_name, specialization, telephone_number, email, doctor_number)
     values (1, 'Alojzy', 'Zdrowy', 'Orthopedist', '456123789','dr.ortho@mail.com', '1'),

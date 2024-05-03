@@ -2,12 +2,8 @@ package com.capgemini.wsb.persistence.entity;
 
 import java.time.LocalDateTime;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.Collection;
 
 @Entity
 @Table(name = "VISIT")
@@ -21,6 +17,13 @@ public class VisitEntity {
 
 	@Column(nullable = false)
 	private LocalDateTime time;
+	@ManyToOne
+	private PatientEntity patient;
+	@ManyToOne
+	private DoctorEntity doctor;
+
+	@JoinColumn(name = "VISIT_ID")
+	private Collection<MedicalTreatmentEntity> medicalTreatments;
 
 	public Long getId() {
 		return id;
