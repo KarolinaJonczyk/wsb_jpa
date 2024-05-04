@@ -4,6 +4,8 @@ import java.time.LocalDate;
 
 import javax.persistence.*;
 import java.util.Collection;
+import javax.persistence.Column;
+
 
 @Entity
 @Table(name = "PATIENT")
