@@ -1,8 +1,8 @@
 package com.capgemini.wsb.dto;
 import com.capgemini.wsb.persistence.entity.AddressEntity;
 import com.capgemini.wsb.persistence.entity.VisitEntity;
+
 import java.util.Collection;
-import java.util.List;
 import java.time.LocalDate;
 
 public class PatientTO {
@@ -14,7 +14,7 @@ public class PatientTO {
     private String patientNumber;
     private LocalDate dateOfBirth;
     private AddressEntity address;
-    private List<VisitTO> visits;
+    private Collection<VisitEntity> visits;
     public Long getId() {
         return id;
     }
@@ -79,11 +79,11 @@ public class PatientTO {
         this.address = address;
     }
 
-    public List<VisitTO> getVisits() {
+    public Collection<VisitEntity> getVisits() {
         return visits;
     }
 
-    public void setVisits(List<VisitTO> visits) {
+    public void setVisits(Collection<VisitEntity> visits) {
         this.visits = visits;
     }
 }

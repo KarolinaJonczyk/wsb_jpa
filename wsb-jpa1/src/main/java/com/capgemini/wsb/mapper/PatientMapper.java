@@ -30,7 +30,7 @@ public class PatientMapper {
         }
         final PatientEntity patientEntity = new PatientEntity();
         patientEntity.setPatientNumber(patientTO.getPatientNumber());
-        patientEntity.setDateOfBirth(patientTO.getAddress());
+        patientEntity.setDateOfBirth(patientTO.getDateOfBirth());
         patientEntity.setEmail(patientTO.getEmail());
         patientEntity.setId(patientTO.getId());
         patientEntity.setTelephoneNumber(patientTO.getTelephoneNumber());
