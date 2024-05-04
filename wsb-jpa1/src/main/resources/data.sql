@@ -22,8 +22,8 @@ insert into visit (id, description, time, doctor_id, patient_id)
                    (3, 'referral for Helicobacter pylori testing', '2021-10-30 12:00:00', 3, 4),
                    (4, 'migraine treatment', '2023-01-12 12:00:00', 4, 3);
 
-   insert into medical_treatment (id, description, visit_id)
-               values (1, 'classic_treatment', 1),
-                      (2, 'RTG', 2),
-                      (3, 'consultation', 3),
-                      (4, 'USG', 4);
+   insert into medical_treatment (id, description, type, visit_id)
+               values (1,'tooth treatment', 'classic_treatment', 1),
+                      (2,'ankle treatment', 'RTG', 2),
+                      (3,'digestive system treatment', 'consultation', 3),
+                      (4,'head treatment', 'USG', 4);
