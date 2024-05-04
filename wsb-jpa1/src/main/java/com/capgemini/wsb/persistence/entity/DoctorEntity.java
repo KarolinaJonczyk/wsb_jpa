@@ -5,7 +5,6 @@ import com.capgemini.wsb.persistence.enums.Specialization;
 import javax.persistence.*;
 import java.util.Collection;
 
-
 @Entity
 @Table(name = "DOCTOR")
 public class DoctorEntity {
@@ -95,6 +94,7 @@ public class DoctorEntity {
 	public void setSpecialization(Specialization specialization) {
 		this.specialization = specialization;
 	}
+
 	public AddressEntity getAddress() {
 		return address;
 	}
