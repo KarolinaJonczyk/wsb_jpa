@@ -15,7 +15,7 @@ public class DoctorTO {
     private String specialization;
     private Collection<VisitEntity> visits;
 
-    public void setId(Long id) {this.id = this.id;
+    public void setId(Long id) {this.id = id;
     }
     public Long getId() {
         return id;
