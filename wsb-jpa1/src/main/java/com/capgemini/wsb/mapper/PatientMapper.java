@@ -1,5 +1,6 @@
 package com.capgemini.wsb.mapper;
 import com.capgemini.wsb.dto.PatientTO;
+import com.capgemini.wsb.persistence.dao.PatientDAO;
 import com.capgemini.wsb.persistence.entity.PatientEntity;
 public class PatientMapper {
     public static PatientTO maptToTO(final PatientEntity patientEntity)
@@ -38,5 +39,9 @@ public class PatientMapper {
         patientEntity.setVisits(patientTO.getVisits());
         patientEntity.setLastName(patientTO.getLastName());
         return patientEntity;
+    }
+
+    public static PatientTO mapToTO(PatientDAO entity) {
+        return null;
     }
 }
