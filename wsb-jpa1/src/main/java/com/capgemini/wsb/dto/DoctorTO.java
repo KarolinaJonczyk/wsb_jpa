@@ -1,6 +1,7 @@
 package com.capgemini.wsb.dto;
 import java.util.*;
 import com.capgemini.wsb.persistence.entity.AddressEntity;
+import com.capgemini.wsb.persistence.entity.VisitEntity;
 
 
 public class DoctorTO {
@@ -11,9 +12,11 @@ public class DoctorTO {
     private String email;
     private String doctorNumber;
     private AddressEntity address;
-    private List<VisitTO> visits;
+    private String specialization;
+    private Collection<VisitEntity> visits;
 
-
+    public void setId(Long id) {this.id = this.id;
+    }
     public Long getId() {
         return id;
     }
@@ -64,11 +67,19 @@ public class DoctorTO {
         this.address = address;
     }
 
-    public List<VisitTO> getVisits() {
+    public String getSpecialization() {
+        return specialization;
+    }
+
+    public void setSpecialization(String specialization) {
+        this.specialization = specialization;
+    }
+
+    public Collection<VisitEntity> getVisits() {
         return visits;
     }
 
-    public void setVisits(List<VisitTO> visits) {
+    public void setVisits(Collection<VisitEntity> visits) {
         this.visits = visits;
     }
 }

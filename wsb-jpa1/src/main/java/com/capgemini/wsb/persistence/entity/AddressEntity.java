@@ -1,6 +1,7 @@
 package com.capgemini.wsb.persistence.entity;
 
 import javax.persistence.*;
+import java.util.Optional;
 
 @Entity
 @Table(name = "ADDRESS")
@@ -69,5 +70,6 @@ public class AddressEntity {
 	public void setPostalCode(String postalCode) {
 		this.postalCode = postalCode;
 	}
+
 
 }

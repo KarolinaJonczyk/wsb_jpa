@@ -37,6 +37,9 @@ public class DoctorEntity {
 	private Collection<VisitEntity> visits;
 	private AddressEntity address;
 
+	public static void setSpecialization(String specialization) {
+	}
+
 	public Long getId() {
 		return id;
 	}
@@ -100,4 +103,11 @@ public class DoctorEntity {
 		this.address = address;
 	}
 
+	public Collection<VisitEntity> getVisits() {
+		return visits;
+	}
+
+	public void setVisits(Collection<VisitEntity> visits) {
+		this.visits = visits;
+	}
 }
