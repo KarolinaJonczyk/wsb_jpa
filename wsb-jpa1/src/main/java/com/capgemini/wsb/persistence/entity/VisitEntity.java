@@ -1,9 +1,10 @@
 package com.capgemini.wsb.persistence.entity;
+import javax.persistence.*;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.capgemini.wsb.persistence.enums.TreatmentType;
 
 import java.time.LocalDateTime;
 
-import javax.persistence.*;
-import java.util.Collection;
 
 @Entity
 @Table(name = "VISIT")
@@ -13,17 +14,28 @@ public class VisitEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
+	@Column(nullable = false)
 	private String description;
 
-	@Column(nullable = false)
-	private LocalDateTime time;
+	@Enumerated(EnumType.STRING)
+	private TreatmentType type;
+
+	@Column(name = "time_visit")
+	private LocalDateTime timeVisit;
+
+
 	@ManyToOne
-	private PatientEntity patient;
+	@JoinColumn(name="VISIT_ID")
+	private VisitEntity visit;
+
 	@ManyToOne
+	@JoinColumn(name = "doctor_id")
 	private DoctorEntity doctor;
 
-	@JoinColumn(name = "VISIT_ID")
-	private Collection<MedicalTreatmentEntity> medicalTreatments;
+	@ManyToOne
+	@JoinColumn(name = "patient_id")
+	private PatientEntity patient;
+
 
 	public Long getId() {
 		return id;
@@ -41,12 +53,21 @@ public class VisitEntity {
 		this.description = description;
 	}
 
-	public LocalDateTime getTime() {
-		return time;
+	public TreatmentType getType() {
+		return type;
 	}
 
-	public void setTime(LocalDateTime time) {
-		this.time = time;
+	public void setType(TreatmentType type) {
+		this.type = type;
+	}
+
+	@JsonIgnore
+	public VisitEntity getVisit() {
+		return visit;
+	}
+
+	public void setVisit(VisitEntity visit) {
+		this.visit = visit;
 	}
 
 }

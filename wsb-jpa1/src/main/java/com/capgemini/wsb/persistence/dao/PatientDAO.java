@@ -3,11 +3,13 @@ import com.capgemini.wsb.persistence.entity.PatientEntity;
 import java.util.List;
 import java.time.LocalDate;
 import com.capgemini.wsb.persistence.entity.VisitEntity;
+import org.springframework.stereotype.Repository;
 
 
+@Repository
 public interface PatientDAO extends Dao<PatientEntity, Long>
 {
-    PatientEntity findId(Long id);
+    PatientEntity findById(Long id);
     PatientEntity findLastName(String lastName);
     PatientEntity save(PatientEntity entity);
     List<PatientEntity> moreThan2Visits(int visitCount);
@@ -15,4 +17,8 @@ public interface PatientDAO extends Dao<PatientEntity, Long>
     List<PatientEntity> findByDateOfBirthAfter(LocalDate date);
     List<VisitEntity> findAllVisitsByPatientId(Long patientId);
 
+    void deleteById(Long id);
 }
+
+
+

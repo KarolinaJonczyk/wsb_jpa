@@ -8,7 +8,7 @@ public class VisitTO {
     private String description;
     private PatientTO patient;
     private DoctorTO doctor;
-    private LocalDateTime time;
+    private LocalDateTime time_visit;
     private List<MedicalTreatmentEntity> medicalTreatments;
 
     public void setId(Long id) {
@@ -39,11 +39,11 @@ public class VisitTO {
         this.doctor = doctor;
     }
     public LocalDateTime getTime() {
-        return time;
+        return time_visit;
     }
 
-    public void setTime(LocalDateTime time) {
-        this.time = time;
+    public void setTime(LocalDateTime time_visit) {
+        this.time_visit = time_visit;
     }
 
     public List<MedicalTreatmentEntity> getMedicalTreatments() {

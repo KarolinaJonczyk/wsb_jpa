@@ -32,6 +32,9 @@ public class PatientEntity {
 	@Column(nullable = false)
 	private LocalDate dateOfBirth;
 
+	@Column(nullable = false)
+	private boolean verified;
+
 	@OneToMany(mappedBy = "patient", orphanRemoval = true)
 	private Collection<VisitEntity> visits;
 

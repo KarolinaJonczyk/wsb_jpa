@@ -25,7 +25,7 @@ public class PatientDaoTest {
     @Test
     public void testShouldFindPatientById() {
         Long patientId = 1L;
-        PatientEntity retrievedPatient = patientDao.findId(patientId);
+        PatientEntity retrievedPatient = patientDao.findById(patientId);
         assertThat(retrievedPatient).isNotNull();
         assertThat(retrievedPatient.getLastName()).isEqualTo("Maj");
     }
@@ -52,12 +52,12 @@ public class PatientDaoTest {
         final PatientEntity saved = patientDao.save(patientEntity);
         assertThat(saved.getId()).isNotNull();
 
-        final PatientEntity newSaved = patientDao.findId(saved.getId());
+        final PatientEntity newSaved = patientDao.findById(saved.getId());
         assertThat(newSaved).isNotNull();
         patientDao.delete(saved.getId());
 
 
-        final PatientEntity removed = patientDao.findId(saved.getId());
+        final PatientEntity removed = patientDao.findById(saved.getId());
         assertThat(removed).isNull();
     }
     @Transactional

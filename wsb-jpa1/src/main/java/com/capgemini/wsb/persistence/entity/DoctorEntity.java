@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.util.Collection;
 
 @Entity
-@Table(name = "DOCTOR")
+@Table(name = "doctor")
 public class DoctorEntity {
 
 	@Id
@@ -34,6 +34,9 @@ public class DoctorEntity {
 	//Relacja dwustronna jeden do wielu
 	@OneToMany(mappedBy = "doctor", cascade= CascadeType.REMOVE)
 	private Collection<VisitEntity> visits;
+
+	@OneToOne
+	@JoinColumn(name = "address_id")
 	private AddressEntity address;
 
 	public static void setSpecialization(String specialization) {
@@ -110,4 +113,5 @@ public class DoctorEntity {
 	public void setVisits(Collection<VisitEntity> visits) {
 		this.visits = visits;
 	}
+
 }
