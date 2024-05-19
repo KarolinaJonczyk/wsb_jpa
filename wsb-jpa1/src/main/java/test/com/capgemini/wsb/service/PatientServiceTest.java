@@ -59,8 +59,8 @@ public class PatientServiceTest {
         PatientTO foundPatient = patientServiceImpl.findById(1L);
 
         assertThat(foundPatient).isNotNull();
-        assertThat(foundPatient.getFirstName()).isEqualTo("John");
-        assertThat(foundPatient.getLastName()).isEqualTo("Doe");
+        assertThat(foundPatient.getFirstName()).isEqualTo("Marcin");
+        assertThat(foundPatient.getLastName()).isEqualTo("Maj");
     }
 
     @Test

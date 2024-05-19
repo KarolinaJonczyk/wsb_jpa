@@ -1,5 +1,6 @@
 package test.com.capgemini.wsb.persistance.dao;
 
+import com.capgemini.wsb.WsbJpaApplication;
 import com.capgemini.wsb.persistence.dao.DoctorDao;
 import com.capgemini.wsb.persistence.entity.DoctorEntity;
 import com.capgemini.wsb.persistence.enums.Specialization;
@@ -13,7 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(classes = WsbJpaApplication.class)
 public class DoctorDaoTest {
     @Autowired
     private DoctorDao doctorDao;

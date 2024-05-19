@@ -1,4 +1,5 @@
 package test.com.capgemini.wsb.persistance.dao;
+import com.capgemini.wsb.WsbJpaApplication;
 import com.capgemini.wsb.persistence.entity.VisitEntity;
 import com.capgemini.wsb.persistence.dao.PatientDAO;
 import com.capgemini.wsb.persistence.entity.PatientEntity;
@@ -15,7 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(classes = WsbJpaApplication.class)
 public class PatientDaoTest {
     @Autowired
     private PatientDAO patientDao;
