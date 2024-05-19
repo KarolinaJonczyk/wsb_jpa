@@ -57,4 +57,37 @@ public class PatientDaoTest {
         final PatientEntity removed = patientDao.findId(saved.getId());
         assertThat(removed).isNull();
     }
+    @Transactional
+    @Test
+    public void testShouldFindPatientsByLastName() {
+        List<PatientEntity> patients = patientDao.findPatientsByLastName("Kot");
+        assertThat(patients).isNotEmpty();
+        assertThat(patients).allMatch(patient -> "Kot".equals(patient.getLastName()));
+    }
+    @Transactional
+    @Test
+    public void testShouldFindPatientsByDateOfBirthAfter() {
+        LocalDate date = LocalDate.of(2000, 1, 1);
+        List<PatientEntity> patients = patientDao.findPatientsByDateOfBirthAfter(date);
+        assertThat(patients).isNotEmpty();
+        assertThat(patients).allMatch(patient -> patient.getDateOfBirth().isAfter(date));
+    }
+    @Transactional
+    @Test
+    public void testShouldFindPatientsWithMoreThanXVisits() {
+        int visitCount = a;
+        List<PatientEntity> patients = patientDao.findPatientsWithMoreThanXVisits(visitCount);
+        assertThat(patients).isNotEmpty();
+        assertThat(patients).allMatch(patient -> patient.getVisits().size() > visitCount);
+    }
+
+    @Transactional
+    @Test
+    public void testShouldFindAllVisitsByPatientId() {
+        Long patientId = 1L;
+        List<VisitEntity> visits = patientDao.findAllVisitsByPatientId(patientId);
+        assertThat(visits).isNotEmpty();
+        assertThat(visits).allMatch(visit -> visit.getPatient().getId().equals(patientId));
+    }
+
 }

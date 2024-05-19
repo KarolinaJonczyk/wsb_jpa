@@ -27,6 +27,9 @@ public class AddressDaoTest
         // then
         assertThat(addressEntity).isNotNull();
         assertThat(addressEntity.getPostalCode()).isEqualTo("62-030");
+        assertThat(addressEntity.getAddressLine1()).isEqualTo("xx");
+        assertThat(addressEntity.getAddressLine2()).isEqualTo("yy");
+        assertThat(addressEntity.getCity()).isEqualTo("city");
     }
 
     @Test

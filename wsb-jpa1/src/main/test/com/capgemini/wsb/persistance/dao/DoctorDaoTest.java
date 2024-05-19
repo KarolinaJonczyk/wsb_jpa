@@ -49,4 +49,14 @@ public class DoctorDaoTest {
         final DoctorEntity removed = doctorDao.findId(saved.getId());
         assertThat(removed).isNull();
     }
+
+    public void testShouldFindDoctorBySpecialization() {
+
+        Specialization specialization = Specialization.DENTIST;
+        DoctorEntity retrievedDoctor = doctorDao.findSpecialization(specialization);
+        assertThat(retrievedDoctor).isNotNull();
+        assertThat(retrievedDoctor.getSpecialization()).isEqualTo(specialization);
+        assertThat(retrievedDoctor.getLastName()).isEqualTo("Kolano");
+    }
+}
 }
