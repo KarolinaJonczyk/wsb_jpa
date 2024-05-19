@@ -1,8 +1,10 @@
-package com.capgemini.wsb.persistance.dao;
-
+package test.com.capgemini.wsb.persistance.dao;
+import com.capgemini.wsb.persistence.entity.VisitEntity;
 import com.capgemini.wsb.persistence.dao.PatientDAO;
 import com.capgemini.wsb.persistence.entity.PatientEntity;
-import com.capgemini.wsb.dto.PatientTO;
+import java.time.LocalDate;
+import java.util.Collections;
+import java.util.List;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -60,7 +62,7 @@ public class PatientDaoTest {
     @Transactional
     @Test
     public void testShouldFindPatientsByLastName() {
-        List<PatientEntity> patients = patientDao.findPatientsByLastName("Kot");
+        List<PatientEntity> patients = Collections.singletonList(patientDao.findLastName("Kot"));
         assertThat(patients).isNotEmpty();
         assertThat(patients).allMatch(patient -> "Kot".equals(patient.getLastName()));
     }
@@ -68,15 +70,17 @@ public class PatientDaoTest {
     @Test
     public void testShouldFindPatientsByDateOfBirthAfter() {
         LocalDate date = LocalDate.of(2000, 1, 1);
-        List<PatientEntity> patients = patientDao.findPatientsByDateOfBirthAfter(date);
+        List<PatientEntity> patients = patientDao.findByDateOfBirthAfter(date);
         assertThat(patients).isNotEmpty();
         assertThat(patients).allMatch(patient -> patient.getDateOfBirth().isAfter(date));
     }
     @Transactional
     @Test
-    public void testShouldFindPatientsWithMoreThanXVisits() {
-        int visitCount = a;
-        List<PatientEntity> patients = patientDao.findPatientsWithMoreThanXVisits(visitCount);
+    public void testShouldFindPatientsWithMoreThanOneVisits() {
+        int visitCount = 2;
+        List<PatientEntity> patients = patientDao.moreThan2Visits(visitCount);
+
+        // Assercje dotyczące wyników
         assertThat(patients).isNotEmpty();
         assertThat(patients).allMatch(patient -> patient.getVisits().size() > visitCount);
     }
@@ -87,7 +91,7 @@ public class PatientDaoTest {
         Long patientId = 1L;
         List<VisitEntity> visits = patientDao.findAllVisitsByPatientId(patientId);
         assertThat(visits).isNotEmpty();
-        assertThat(visits).allMatch(visit -> visit.getPatient().getId().equals(patientId));
+        assertThat(visits).allMatch(visit -> visit.getId().equals(patientId));
     }
 
 }

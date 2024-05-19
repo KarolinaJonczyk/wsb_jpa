@@ -1,19 +1,20 @@
-package com.capgemini.wsb.service;
+package test.com.capgemini.wsb.service;
 
 import com.capgemini.wsb.dto.PatientTO;
 import com.capgemini.wsb.persistence.entity.AddressEntity;
 import com.capgemini.wsb.persistence.entity.VisitEntity;
+import com.capgemini.wsb.service.PatientService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import com.capgemini.wsb.service.impl.PatientServiceImpl;
 import org.mockito.MockitoAnnotations;
 import org.springframework.test.context.junit4.SpringRunner;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
@@ -77,7 +78,7 @@ public class PatientServiceTest {
     public void testDelete() {
         doNothing().when(patientService).delete(1L);
 
-        patientServiceImpl.delete(1L);
+        patientServiceImpl.deletePatient(1L);
 
         verify(patientService, times(1)).delete(1L);
     }

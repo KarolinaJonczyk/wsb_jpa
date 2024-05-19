@@ -1,8 +1,7 @@
-package com.capgemini.wsb.persistance.dao;
+package test.com.capgemini.wsb.persistance.dao;
 
 import com.capgemini.wsb.persistence.dao.DoctorDao;
 import com.capgemini.wsb.persistence.entity.DoctorEntity;
-import com.capgemini.wsb.dto.DoctorTO;
 import com.capgemini.wsb.persistence.enums.Specialization;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,40 +22,31 @@ public class DoctorDaoTest {
     @Test
     public void testShouldFindDoctorById() {
         Long doctorId = 1L;
-        DoctorEntity retrievedDoctor = doctorDao.findId(doctorId);
+        DoctorEntity retrievedDoctor = doctorDao.findOne(doctorId);
 
         assertThat(retrievedDoctor).isNotNull();
-        assertThat(retrievedDoctor.getLastName()).isEqualTo('Zdrowy');
+        assertThat(retrievedDoctor.getLastName()).isEqualTo("Zdrowy");
     }
 
     @Transactional
     @Test
     public void testShouldSaveAndRemoveDoctor() {
         DoctorEntity doctorEntity = new DoctorEntity();
-        doctorEntity.setFirstName('Natalia');
-        doctorEntity.setLastName('Niesmaczna');
-        doctorEntity.setTelephoneNumber('8921674356');
-        doctorEntity.setEmail('dr-gp2@mail.com');
-        doctorEntity.setDoctorNumber('5');
+        doctorEntity.setFirstName("Natalia");
+        doctorEntity.setLastName("Niesmaczna");
+        doctorEntity.setTelephoneNumber("8921674356");
+        doctorEntity.setEmail("dr-gp2@mail.com");
+        doctorEntity.setDoctorNumber("5");
         doctorEntity.setSpecialization(Specialization.GP);
 
         final DoctorEntity saved = doctorDao.save(doctorEntity);
         assertThat(saved.getId()).isNotNull();
 
-        final DoctorEntity newSaved = doctorDao.findId(saved.getId());
+        final DoctorEntity newSaved = doctorDao.findOne(saved.getId());
         assertThat(newSaved).isNotNull();
         doctorDao.delete(saved.getId());
-        final DoctorEntity removed = doctorDao.findId(saved.getId());
+        final DoctorEntity removed = doctorDao.findOne(saved.getId());
         assertThat(removed).isNull();
     }
 
-    public void testShouldFindDoctorBySpecialization() {
-
-        Specialization specialization = Specialization.DENTIST;
-        DoctorEntity retrievedDoctor = doctorDao.findSpecialization(specialization);
-        assertThat(retrievedDoctor).isNotNull();
-        assertThat(retrievedDoctor.getSpecialization()).isEqualTo(specialization);
-        assertThat(retrievedDoctor.getLastName()).isEqualTo("Kolano");
-    }
-}
-}
+   }

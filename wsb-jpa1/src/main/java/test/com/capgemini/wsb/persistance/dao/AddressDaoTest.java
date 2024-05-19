@@ -1,4 +1,4 @@
-package com.capgemini.wsb.persistance.dao;
+package test.com.capgemini.wsb.persistance.dao;
 
 import com.capgemini.wsb.persistence.dao.AddressDao;
 import com.capgemini.wsb.persistence.entity.AddressEntity;

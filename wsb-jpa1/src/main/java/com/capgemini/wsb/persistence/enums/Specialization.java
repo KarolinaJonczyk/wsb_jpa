@@ -7,6 +7,7 @@ public enum Specialization {
 	DERMATOLOGIST,
 	OCULIST,
 	ORTHOPEDIST,
-	NEUROLOGIST
+	NEUROLOGIST,
+	DENTIST
 
 }
