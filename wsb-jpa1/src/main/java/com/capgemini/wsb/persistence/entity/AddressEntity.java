@@ -11,15 +11,15 @@ public class AddressEntity {
 	@Column(name="id", nullable = false)
 	private Long id;
 
-	@Column(nullable = false, length = 50)
+	@Column(name = "city", nullable = false, length = 50)
 	private String city;
 
-	@Column(nullable = false)
+	@Column(name = "addressLine1", nullable = false)
 	private String addressLine1;
-
+	@Column(nullable = false)
 	private String addressLine2;
 
-	@Column(nullable = false, length = 6)
+	@Column(name = "postalCode", nullable = false, length = 6)
 	private String postalCode;
 
 	// relacje dwukierunkowe:

@@ -35,6 +35,7 @@ public class PatientEntity {
 	@Column(nullable = false)
 	private boolean verified;
 
+
 	@OneToMany(mappedBy = "patient", orphanRemoval = true)
 	private Collection<VisitEntity> visits;
 
@@ -93,6 +94,8 @@ public class PatientEntity {
 	public void setDateOfBirth(LocalDate dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
+	public boolean getVerified() {return verified;}
+	public void setVerified(boolean verified) {this.verified = verified;}
 	public Collection<VisitEntity> getVisits() {
 		return visits;
 	}
