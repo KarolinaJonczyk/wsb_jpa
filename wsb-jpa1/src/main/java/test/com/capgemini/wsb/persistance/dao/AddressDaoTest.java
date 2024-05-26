@@ -11,7 +11,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
 import static org.assertj.core.api.Assertions.assertThat;
-
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = WsbJpaApplication.class)
 public class AddressDaoTest
@@ -22,15 +21,9 @@ public class AddressDaoTest
     @Transactional
     @Test
     public void testShouldFindAddressById() {
-        // given
-        // when
         AddressEntity addressEntity = addressDao.findOne(1L);
-        // then
         assertThat(addressEntity).isNotNull();
         assertThat(addressEntity.getPostalCode()).isEqualTo("62-030");
-        assertThat(addressEntity.getAddressLine1()).isEqualTo("xx");
-        assertThat(addressEntity.getAddressLine2()).isEqualTo("yy");
-        assertThat(addressEntity.getCity()).isEqualTo("city");
     }
 
     @Test

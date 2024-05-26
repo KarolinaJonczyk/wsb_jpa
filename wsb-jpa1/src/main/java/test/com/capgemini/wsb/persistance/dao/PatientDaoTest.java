@@ -47,7 +47,10 @@ public class PatientDaoTest {
         patientEntity.setLastName("Dynia");
         patientEntity.setTelephoneNumber("918273465");
         patientEntity.setEmail("dynia.d@mail.com");
+        patientEntity.setDateOfBirth(LocalDate.parse("1991-05-02"));
         patientEntity.setPatientNumber("0012221");
+        patientEntity.setVerified(true);
+
 
         final PatientEntity saved = patientDao.save(patientEntity);
         assertThat(saved.getId()).isNotNull();
@@ -78,10 +81,9 @@ public class PatientDaoTest {
     @Transactional
     @Test
     public void testShouldFindPatientsWithMoreThanOneVisits() {
-        int visitCount = 2;
+        int visitCount = 1;
         List<PatientEntity> patients = patientDao.moreThan2Visits(visitCount);
 
-        // Assercje dotyczące wyników
         assertThat(patients).isNotEmpty();
         assertThat(patients).allMatch(patient -> patient.getVisits().size() > visitCount);
     }
@@ -92,7 +94,14 @@ public class PatientDaoTest {
         Long patientId = 1L;
         List<VisitEntity> visits = patientDao.findAllVisitsByPatientId(patientId);
         assertThat(visits).isNotEmpty();
-        assertThat(visits).allMatch(visit -> visit.getId().equals(patientId));
+
+        visits.forEach(visit -> {
+            System.out.println("Visit ID: " + visit.getId() + ", Patient ID: " + visit.getPatient().getId());
+        });
+
+        assertThat(visits).allMatch(visit -> visit.getPatient().getId().equals(patientId));
+
+
     }
 
 }

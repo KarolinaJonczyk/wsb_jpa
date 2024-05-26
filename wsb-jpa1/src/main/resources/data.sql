@@ -22,7 +22,8 @@ insert into visit (id, description, time_visit, doctor_id, patient_id)
             values (1, 'wisdom tooth extraction', '2024-05-02 12:30:00', 2, 1),
                    (2, 'treatment of a sprained ankle', '2020-12-01 12:00:00', 1, 2),
                    (3, 'referral for Helicobacter pylori testing', '2021-10-30 12:00:00', 3, 4),
-                   (4, 'migraine treatment', '2023-01-12 12:00:00', 4, 3);
+                   (4, 'migraine treatment', '2023-01-12 12:00:00', 4, 3),
+                   (5, 'second wisdom tooth extraction', '2024-07-24 12:00:00', 2, 1);
 
    insert into medical_treatment (id, description, type, visit_id)
                values (1,'tooth treatment', 'classic_treatment', 1),

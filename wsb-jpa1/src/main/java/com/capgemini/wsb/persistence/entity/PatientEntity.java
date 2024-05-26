@@ -36,7 +36,9 @@ public class PatientEntity {
 	private boolean verified;
 
 
-	@OneToMany(mappedBy = "patient", orphanRemoval = true)
+//	@OneToMany(mappedBy = "patient", orphanRemoval = true)
+//	private Collection<VisitEntity> visits;
+	@OneToMany(mappedBy = "patient", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
 	private Collection<VisitEntity> visits;
 
 	public Long getId() {
@@ -103,5 +105,6 @@ public class PatientEntity {
 	public void setVisits(Collection<VisitEntity> visits) {
 		this.visits = visits;
 	}
+
 
 }
