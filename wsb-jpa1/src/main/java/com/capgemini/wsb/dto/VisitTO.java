@@ -1,5 +1,4 @@
 package com.capgemini.wsb.dto;
-import com.capgemini.wsb.persistence.entity.DoctorEntity;
 import com.capgemini.wsb.persistence.entity.MedicalTreatmentEntity;
 
 import java.time.LocalDateTime;
@@ -33,7 +32,7 @@ public class VisitTO {
         this.patient = patient;
     }
 
-    public DoctorEntity getDoctor() {
+    public DoctorTO getDoctor() {
         return doctor;
     }
 
