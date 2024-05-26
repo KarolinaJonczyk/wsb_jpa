@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86fefbdf-df89-482e-8aaa-feb22c282a53" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/wsb-jpa1/src/main/java/com/capgemini/wsb/mapper/VisitMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wsb-jpa1/src/main/java/com/capgemini/wsb/dto/VisitTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/wsb-jpa1/src/main/java/com/capgemini/wsb/dto/VisitTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wsb-jpa1/src/main/java/com/capgemini/wsb/persistence/entity/VisitEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/wsb-jpa1/src/main/java/com/capgemini/wsb/persistence/entity/VisitEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wsb-jpa1/src/main/java/com/capgemini/wsb/service/PatientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/wsb-jpa1/src/main/java/com/capgemini/wsb/service/PatientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wsb-jpa1/src/main/java/test/com/capgemini/wsb/service/PatientServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/wsb-jpa1/src/main/java/test/com/capgemini/wsb/service/PatientServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,13 +43,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/karolinajonczyk/Documents/GitHub/wsb_jpa"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/karolinajonczyk/Documents/GitHub/wsb_jpa&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="JUnit.PatientServiceTest">
     <configuration name="WsbJpaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.capgemini.wsb.WsbJpaApplication" />
