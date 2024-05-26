@@ -1,4 +1,5 @@
 package com.capgemini.wsb.dto;
+import com.capgemini.wsb.persistence.entity.DoctorEntity;
 import com.capgemini.wsb.persistence.entity.MedicalTreatmentEntity;
 
 import java.time.LocalDateTime;
@@ -11,6 +12,7 @@ public class VisitTO {
     private LocalDateTime time_visit;
     private List<MedicalTreatmentEntity> medicalTreatments;
 
+    public Long getId() {return null;}
     public void setId(Long id) {
         this.id = id;
     }
@@ -31,7 +33,7 @@ public class VisitTO {
         this.patient = patient;
     }
 
-    public DoctorTO getDoctor() {
+    public DoctorEntity getDoctor() {
         return doctor;
     }
 
@@ -42,7 +44,7 @@ public class VisitTO {
         return time_visit;
     }
 
-    public void setTime(LocalDateTime time_visit) {
+    public void setTimeVisit(LocalDateTime time_visit) {
         this.time_visit = time_visit;
     }
 
@@ -53,4 +55,5 @@ public class VisitTO {
     public void setMedicalTreatments(List<MedicalTreatmentEntity> medicalTreatments) {
         this.medicalTreatments = medicalTreatments;
     }
+
 }

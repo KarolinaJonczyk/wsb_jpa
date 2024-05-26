@@ -7,4 +7,6 @@ public interface PatientService {
     PatientTO findById(final Long id);
     PatientTO saveOrUpdate(final PatientTO patientTO);
     void delete(final Long id);
+
+    void removePatientEntity(long l);
 }

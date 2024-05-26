@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86fefbdf-df89-482e-8aaa-feb22c282a53" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_2_12_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_2_12_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_2_12_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wsb-jpa1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/wsb-jpa1/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wsb-jpa1/src/main/java/com/capgemini/wsb/persistence/entity/PatientEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/wsb-jpa1/src/main/java/com/capgemini/wsb/persistence/entity/PatientEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wsb-jpa1/src/main/java/com/capgemini/wsb/mapper/VisitMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wsb-jpa1/src/main/java/com/capgemini/wsb/dto/VisitTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/wsb-jpa1/src/main/java/com/capgemini/wsb/dto/VisitTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wsb-jpa1/src/main/java/com/capgemini/wsb/persistence/entity/VisitEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/wsb-jpa1/src/main/java/com/capgemini/wsb/persistence/entity/VisitEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wsb-jpa1/src/main/java/test/com/capgemini/wsb/persistance/dao/AddressDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/wsb-jpa1/src/main/java/test/com/capgemini/wsb/persistance/dao/AddressDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wsb-jpa1/src/main/java/test/com/capgemini/wsb/persistance/dao/PatientDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/wsb-jpa1/src/main/java/test/com/capgemini/wsb/persistance/dao/PatientDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wsb-jpa1/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/wsb-jpa1/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wsb-jpa1/src/main/java/com/capgemini/wsb/service/PatientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/wsb-jpa1/src/main/java/com/capgemini/wsb/service/PatientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wsb-jpa1/src/main/java/test/com/capgemini/wsb/service/PatientServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/wsb-jpa1/src/main/java/test/com/capgemini/wsb/service/PatientServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +19,13 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -53,7 +55,20 @@
     "last_opened_file_path": "/Users/karolinajonczyk/Documents/GitHub/wsb_jpa"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.PatientDaoTest">
+  <component name="RunManager" selected="JUnit.PatientServiceTest">
+    <configuration name="WsbJpaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.capgemini.wsb.WsbJpaApplication" />
+      <module name="wsb-jpa1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.capgemini.wsb.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AddressDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wsb-jpa1" />
       <extension name="coverage">
@@ -87,22 +102,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DoctorDaoTest.testShouldFindDoctorById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="wsb-jpa1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.com.capgemini.wsb.persistance.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test.com.capgemini.wsb.persistance.dao" />
-      <option name="MAIN_CLASS_NAME" value="test.com.capgemini.wsb.persistance.dao.DoctorDaoTest" />
-      <option name="METHOD_NAME" value="testShouldFindDoctorById" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="PatientDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wsb-jpa1" />
       <extension name="coverage">
@@ -118,35 +117,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PatientDaoTest.testShouldFindAllVisitsByPatientId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PatientServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wsb-jpa1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.com.capgemini.wsb.persistance.dao.*" />
+          <option name="PATTERN" value="test.com.capgemini.wsb.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test.com.capgemini.wsb.persistance.dao" />
-      <option name="MAIN_CLASS_NAME" value="test.com.capgemini.wsb.persistance.dao.PatientDaoTest" />
-      <option name="METHOD_NAME" value="testShouldFindAllVisitsByPatientId" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="test.com.capgemini.wsb.service" />
+      <option name="MAIN_CLASS_NAME" value="test.com.capgemini.wsb.service.PatientServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.WsbJpaApplication" />
       <item itemvalue="JUnit.DoctorDaoTest" />
-      <item itemvalue="JUnit.DoctorDaoTest.testShouldFindDoctorById" />
       <item itemvalue="JUnit.PatientDaoTest" />
-      <item itemvalue="JUnit.PatientDaoTest.testShouldFindAllVisitsByPatientId" />
+      <item itemvalue="JUnit.PatientServiceTest" />
       <item itemvalue="JUnit.AddressDaoTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PatientServiceTest" />
+        <item itemvalue="Application.WsbJpaApplication" />
         <item itemvalue="JUnit.PatientDaoTest" />
-        <item itemvalue="JUnit.PatientDaoTest.testShouldFindAllVisitsByPatientId" />
         <item itemvalue="JUnit.DoctorDaoTest" />
-        <item itemvalue="JUnit.DoctorDaoTest.testShouldFindDoctorById" />
         <item itemvalue="JUnit.AddressDaoTest" />
       </list>
     </recent_temporary>

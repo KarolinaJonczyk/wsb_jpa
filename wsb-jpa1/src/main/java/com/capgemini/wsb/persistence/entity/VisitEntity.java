@@ -1,5 +1,6 @@
 package com.capgemini.wsb.persistence.entity;
 import javax.persistence.*;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.capgemini.wsb.persistence.enums.TreatmentType;
 
@@ -32,6 +33,7 @@ public class VisitEntity {
 	@JoinColumn(name = "doctor_id")
 	private DoctorEntity doctor;
 
+
 	@ManyToOne
 	@JoinColumn(name = "patient_id")
 	private PatientEntity patient;
@@ -51,6 +53,12 @@ public class VisitEntity {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public LocalDateTime getVisitTime() {return timeVisit;}
+
+	public void setVisitTime(LocalDateTime timeVisit) {
+		this.timeVisit = timeVisit;
 	}
 
 	public TreatmentType getType() {
@@ -85,4 +93,6 @@ public class VisitEntity {
 	public void setPatient(PatientEntity patient) {
 		this.patient = patient;
 	}
+
 }
+
